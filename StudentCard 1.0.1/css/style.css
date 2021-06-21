@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/*
+ * DeathGhost
+ * http://www.deathghost.cn
+ * Copyright 2016
+ * Released on: May 01, 2016
+*/
+html {
+    font-size: 10px
+}
+
+@media screen and (min-width: 321px) and (max-width: 375px) {
+    html {
+        font-size: 11px
+    }
+}
+
+@media screen and (min-width: 376px) and (max-width: 414px) {
+    html {
+        font-size: 12px
+    }
+}
+
+@media screen and (min-width: 415px) and (max-width: 639px) {
+    html {
+        font-size: 15px
+    }
+}
+
+@media screen and (min-width: 640px) and (max-width: 719px) {
+    html {
+        font-size: 20px
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 749px) {
+    html {
+        font-size: 22.5px
+    }
+}
+
+@media screen and (min-width: 750px) and (max-width: 799px) {
+    html {
+        font-size: 23.5px
+    }
+}
+
+@media screen and (min-width: 800px) {
+    html {
+        font-size: 25px
+    }
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+
+.picker .picker-panel .picker-choose .picker-title {
+    font-size: .3rem;
+}
+
+.picker .picker-panel .wheel-wrapper .wheel .wheel-scroll .wheel-item {
+    font-size: .3rem;
+    /* 新增布局样式宽屏适配 */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picker .picker-panel .wheel-wrapper .wheel .wheel-scroll .wheel-item {
+    font-size: 1.5rem;
+    /*滚动区域列表ul>li*/
+    line-height: 5rem;
+    height: auto;
+
+}

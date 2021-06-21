@@ -1,0 +1,141 @@
+<!--版本号： 1.1.7-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>学生卡线上申领</title>
+    <link rel="stylesheet" href="./css/home.css">
+    <link rel="stylesheet" href="./Iconfont/iconfont.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/mobileSelect.css">
+    <link rel="stylesheet" href="./css/message.css">
+    <script src="./js/school.js"></script>
+    <script src="./js/picker.min.js"></script>
+    <!-- <script src="./js/mypicker.js"></script> -->
+    <script src="./js/mobileSelect.js"></script>
+    <script src="./js/CityData.js"></script>
+    <script src="./js/City.js"></script>
+    <script src="./js/areaFn.js"></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/area.js"></script>
+    <script src="./js/http.js"></script>
+    <script src="./js/message.min.js"></script>
+    <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=srKgxhZwXGWu5rTbZChgLqonvTDXFYfz">
+    </script>
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- 头部 -->
+    <div class="stuCar_container">
+        <h3 class="big_title">学生身份信息录入</h3>
+        <div class="info_ipt first_ipt">
+            <label>姓 名</label>
+            <input type="text" placeholder="学生姓名" id='User-ipt' maxlength="17">
+            <img src="./images/del.png" alt="" class="del" id='Del-Icon'>
+            <p class="hit_msg" id="Hit-Msg">您输入的姓名有误，请重新输入</p>
+        </div>
+
+        <div class="info_ipt">
+            <span>身份证</span>
+            <!-- <input type="number" pattern="\d*" placeholder="学生身份证" id="Stu-id" maxlength="18"> -->
+            <input type="text" name="" placeholder="学生身份证" id="Stu-id" maxlength="18">
+            <p class=" hit_msg">您输入的身份证有误，请重新输入 </p>
+        </div>
+
+
+        <div class="info_ipt">
+            <span>区 域</span>
+            <input type="text" readonly class="btn btn-info btn-lg active textbox areaset " id="sel_area"
+                placeholder="学校区域">
+            <img src="./images/da.png" alt="" class="laimg3">
+
+            <p class="New_AddMeg">*请选择区域</p>
+        </div>
+
+
+        <div class="info_ipt stuIpt">
+            <span>学 校</span>
+            <div id="trigger5" class="stu_box">
+                <div style="width: 100%;">
+                    <input type="text" readonly class=" textbox schoolId " placeholder="请选择学校" id='school_name'>
+                </div>
+
+                </input>
+            </div>
+            <p class="hit_msg">*请选择学校</p>
+            <img src="./images/da.png" alt="" class="laimg">
+
+        </div>
+
+        <div class="info_ipt">
+            <span>年级班级</span>
+            <input type="text" readonly class="btn btn-info btn-lg active textbox setWay " id="sel_city"
+                placeholder="请选择年级班级">
+            <img src="./images/da.png" alt="" class="laimg2">
+            <p class="hit_msg">*请选择年级、班级</p>
+        </div>
+
+
+
+
+        <div class="info_ipt">
+            <span>家庭住址</span>
+            <input type="text" placeholder="由省/市/县等街道号组成" id='addr_ipt' class="family_addr showadd ">
+            <img src="./images/position.png" alt="" class="position-img" id="Position_Img">
+            <p class="hit_msg">地址由2位至255位组成，不包括@#￥~+|{}等字符</p>
+        </div>
+
+        <div class="next_contianer">
+            <button type="button" class="nextBtn" id="NextBtn">前往填写家长信息</button>
+        </div>
+
+
+        <!-- 地图蒙层 -->
+        <div class="mask">
+            <!-- 确认、取消按钮 -->
+            <div class="set-box">
+                <button class="canle byreturn">取消</button>
+                <button class="ok">完成</button>
+            </div>
+            <div id="l-map"></div>
+            <div>
+                <div>
+                    <div id="r-result" class="s-result">
+                        <input type="text" id="suggestId" size="20" value="百度" style="width:150px;"
+                            class="ser-ipt data-ipt" placeholder="请输入地点" />
+                        <button id="search-btn">搜索</button>
+                    </div>
+                </div>
+                <div class="search-data">
+                    <!-- <div>
+            <input type="text" class="data-ipt" placeholder="搜索地点">
+        </div> -->
+
+                    <div id="searchResultPanel"
+                        style="border:1px solid #C0C0C0;width:150px;max-height:100px;overflow: hidden;overflow-y: scroll; display:none;">
+                    </div>
+                    <!-- 显示匹配到的数据 -->
+                    <div id="s-data">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+
+
+</html>

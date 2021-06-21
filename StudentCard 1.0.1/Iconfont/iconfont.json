@@ -1,0 +1,23 @@
+{
+  "id": "2598715",
+  "name": "绵洲通",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4471486",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e6d0",
+      "unicode_decimal": 59088
+    },
+    {
+      "icon_id": "8875499",
+      "name": "清除",
+      "font_class": "qingchushuru",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    }
+  ]
+}
